@@ -13,7 +13,7 @@ namespace TheSolidDesignPrinciples.Dependency_Inversion_Principle
     /// </summary>
     public class Person
     {
-        public string name;
+        public string Name;
     }
 
     /// <summary>
@@ -28,6 +28,9 @@ namespace TheSolidDesignPrinciples.Dependency_Inversion_Principle
             relations.Add((parent, Relationship.Parent, child));
             relations.Add((parent, Relationship.Child, parent));
         }
+
+        // making a public getter
+        public List<(Person, Relationship, Person)> Relations => relations;
     }
 
     public enum Relationship

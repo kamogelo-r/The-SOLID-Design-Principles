@@ -4,9 +4,10 @@ using System.Linq;
 namespace TheSolidDesignPrinciples.Dependency_Inversion_Principle
 {
     /// <summary>
-    /// high level parts of the system should not
-    /// depend on low level parts of the system
+    /// high level parts of the system should not depend on low level parts of the system
     /// directly, but through abstraction instead
+    /// do not expose implementation details directly, use abstractions instead
+    /// i.e. for APIs, change the internals of the system without changing the exposing interface
     /// </summary>
     public class Person
     {
